@@ -1,0 +1,116 @@
+*, ::after, ::before {
+    box-sizing: border-box
+}
+
+a {
+    color: inherit;
+    text-decoration: unset;
+    transition-duration: 0.3s;
+}
+
+* {
+    margin: 0
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords
+    }
+}
+
+body {
+    overflow-x: hidden;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased
+}
+
+canvas, img, picture, svg, video {
+    display: block;
+    max-width: 100%
+}
+
+button, input, select, textarea {
+    font: inherit
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    overflow-wrap: break-word
+}
+
+p {
+    text-wrap: pretty
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance
+}
+
+#__next, #root {
+    isolation: isolate
+}
+
+ul li,
+ol li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/**
+ * ICONS
+ */
+
+.icon-mask.icon-mask {
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    background-color: currentColor;
+}
+
+
+/* global */
+
+:root {
+    /* spaces*/
+    --space-25: clamp(15px, 1.4vw, 25px);
+    --space-40: clamp(30px, 2.2vw, 40px);
+    --space-50: clamp(35px, 2.8vw, 50px);
+    --space-60: clamp(40px, 4vw, 60px);
+    /* fonts */
+    --font-16: clamp(14px, 1.2vw, 26px);
+    --font-20: clamp(15px, 1.3vw, 20px);
+    --font-24: clamp(15px, 1.4vw, 24px);
+    --font-34: clamp(20px, 1.8vw, 34px);
+    --font-40: clamp(30px, 2.2vw, 40px);
+    --font-80: clamp(40px, 4.2vw, 80px);
+    --font-100: clamp(50px, 5.4vw, 100px);
+    --font-60: clamp(30px, 4vw, 60px);
+    --font-50: clamp(26px, 3.5vw, 50px);
+
+    --color-primary: #1e1e1e;
+    --color-secondary: #5761b9;
+    --color-tertiary: #DADEE8;
+}
+
+a:hover {
+    color: var(--color-secondary)
+}
+
+body {
+    font-family: "Instrument Sans", sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 200px;
+    max-width: 1740px;
+}
+
+.container-big {
+    max-width: 1720px;
+    padding: 0 40px;
+}
