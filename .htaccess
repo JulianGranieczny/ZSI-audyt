@@ -16,10 +16,11 @@
 
 
 RewriteEngine on
+
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-RewriteRule ^(en|pl|de|fr)/([^/]+)$ /index.php?page=$2 [QSA,L]
-
+RewriteRule ^(en|pl|de|fr)/?$ index.php?lang=$1 [QSA,L]
+RewriteRule ^(en|pl|de|fr)/([^/]+)/?$ index.php?page=$2&lang=$1 [QSA,L]
 
 # Set ROOT_FOLDER environment variable
 RewriteCond %{REQUEST_FILENAME} !-d

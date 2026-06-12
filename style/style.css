@@ -93,6 +93,8 @@ ol li {
     --color-primary: #1e1e1e;
     --color-secondary: #5761b9;
     --color-tertiary: #DADEE8;
+    --gradient-primary: linear-gradient(180deg, #ffffff 0%, var(--color-secondary) 100%);
+
 }
 
 a:hover {
@@ -100,9 +102,16 @@ a:hover {
 }
 
 body {
+    background: var(--gradient-primary);
     font-family: "Instrument Sans", sans-serif;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+#page{
+    flex-grow: 1;
+}
+
 
 .container {
     margin: 0 auto;
@@ -113,4 +122,57 @@ body {
 .container-big {
     max-width: 1720px;
     padding: 0 40px;
+}
+#main-menu ul .active{
+    color: var(--color-secondary);
+}
+#main-menu ul {
+    padding: 10px 0;
+    display: flex;
+    gap: var(--space-25);
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.header-bottom {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-control-element {
+    border-radius: 50px;
+    min-height: 46px;
+    width: 100%;
+    padding: 5px calc(var(--space-25) + 5px);
+    flex-grow: 1;
+}
+
+header #search-form .form-element-wrapper {
+    width: 100%;
+}
+
+#search-form {
+    width: 100%;
+}
+
+.header-center {
+    display: flex;
+    max-width: 500px;
+    flex-grow: 1;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+footer{
+    background: #fff;
+    padding: 10px;
 }

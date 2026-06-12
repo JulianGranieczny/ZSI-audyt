@@ -1,22 +1,5 @@
 <?php session_start();
-require_once('skeleton/siteOptions/siteOptions.php');
-if (!isset($_SESSION['language'])) {
-    $_SESSION['language'] = 'pl';
-}
-
-if (isset($_GET['lang'])) {
-    $_SESSION['language'] = $_GET['lang'];
-}
-
-setcookie("language", $_SESSION['language'], time() + (86400 * 30), "/");
-
-$lang = $_SESSION['language'];
-if (isset($_GET['page'])) {
-    $pageName = basename($_GET['page']);
-} else {
-    $pageName = 'index';
-}
-
+require_once 'siteOptions/siteOptions.php';
 
 ?>
 
@@ -38,22 +21,22 @@ if (isset($_GET['page']) && $_GET['page'] !== 'index' || isset($_GET['postId']))
     $page = 'index';
     $bodyClass = 'mainpage';
 }
-include('skeleton/siteOptions/head.php');
+include('layout/siteOptions/head.php');
 
 ?>
 <body class="<?php echo $bodyClass; ?>">
 
 <div id="page">
     <header>
-        <?php require('skeleton/header.php'); ?>
+        <?php require('layout/header.php'); ?>
     </header>
     <div id="page-content">
 
-        <?php require('skeleton/pageContent.php'); ?>
+        <?php require('layout/pageContent.php'); ?>
     </div>
 </div>
 <footer>
-    <?php require('skeleton/footer.php'); ?>
+    <?php require('layout/footer.php'); ?>
 </footer>
 
 

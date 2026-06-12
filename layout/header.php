@@ -1,68 +1,87 @@
 <?php
 $mainMenu = [
-    'pl' => [
-        [
-            'link' => 'offer',
-            'title' => 'Oferta',
+        'content' => [
+                'pl' => [
+                        [
+                                'link' => '/',
+                                'title' => 'Strona Główna',
+                        ],
+                        [
+                                'link' => 'offer',
+                                'title' => 'Oferta',
+                        ],
+                        [
+                                'link' => 'about',
+                                'title' => 'O nas',
+                        ],
+                        [
+                                'link' => 'contact',
+                                'title' => 'Kontakt',
+                        ],
+                ],
+                'en' => [
+                        [
+                                'link' => '/',
+                                'title' => 'Home',
+                        ],
+                        [
+                                'link' => 'offer',
+                                'title' => 'Offer',
+                        ],
+                        [
+                                'link' => 'about',
+                                'title' => 'About Us',
+                        ],
+                        [
+                                'link' => 'contact',
+                                'title' => 'Contact',
+                        ],
+                ],
         ],
-        [
-            'link' => 'subscription',
-            'title' => 'Subskrypcje',
-        ],
-        [
-            'link' => 'aboutUs',
-            'title' => 'O nas',
-        ],
-        [
-            'link' => 'contact',
-            'title' => 'Kontakt',
-        ],
-        [
-            'link' => 'blog',
-            'title' => 'Blog',
-        ],
-    ],
-    'en' => [
-        [
-            'link' => 'offer',
-            'title' => 'Offer',
-        ],
-        [
-            'link' => 'subscription',
-            'title' => 'Subscriptions',
-        ],
-        [
-            'link' => 'aboutUs',
-            'title' => 'About Us',
-        ],
-        [
-            'link' => 'contact',
-            'title' => 'Contact',
-        ],
-        [
-            'link' => 'blog',
-            'title' => 'Blog',
-        ],
-    ],
 ];
 ?>
 
 <div class="container">
-    <div class="header-inner">
+    <div class="header-top">
+        <nav id="main-menu">
+            <ul>
+                <?php foreach (translatedText('content', $mainMenu) as $item) { ?>
+                    <li class="<?php echo (
+                            (isset($_GET['page']) && $_GET['page'] === $item['link']) ||
+                            ($item['link'] === '/' && !isset($_GET['page']))
+                    ) ? 'active' : ''; ?>">
+                        <a href="<?php echo $item['link']; ?>">
+                            <?php echo $item['title']; ?>
+                        </a>
+                    </li>
+                <?php } ?>
+            </ul>
+        </nav>
+    </div>
+    <div class="header-bottom">
         <div class="header-left">
             <div class="logo">
-
+                <a href="/">
+                    Prime Selection
+                </a>
             </div>
         </div>
         <div class="header-center">
-            <nav id="main-menu">
-                    <?php include('modules/mainmenu.php') ?>
-            </nav>
+            <form id="search-form">
+                <div class="form-element-wrapper">
+                    <input type="text" class="form-control-element"
+                           placeholder="<?php echo translatedText('searchInput') ?>">
+                </div>
+            </form>
         </div>
         <div class="header-right">
-
+            <button class="cart">
+                <?php echo translatedText('cart') ?>
+            </button>
+            <button class="login">
+                <?php echo translatedText('login') ?>
+            </button>
             <?php include('modules/languageList.php') ?>
-            <?php include('modules/socialList.php') ?>
 
             <div class="mobile-only">
                 <div class="mobile-menu-button">

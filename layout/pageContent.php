@@ -1,21 +1,21 @@
 <?php
 chdir(__DIR__);
 
-$file = '../subpages/index.php';
+$file = '../views/index.php';
 
 if(isset($_GET['page'])) {
     $pageName = basename($_GET['page']);
 
-    $file2 = "../subpages/$pageName.php";
+    $file2 = "../views/$pageName.php";
     if(file_exists($file2)) {
         $file = $file2;
     } else {
-        $file = '../subpages/error/404.php';
+        $file = '../views/error/404.php';
     }
 }
 
 if (isset($_GET['postId'])) {
     $postId = $_GET['postId'];
-    $file = '../subpages/post.php';
+    $file = '../views/post.php';
 }
 require_once $file;
