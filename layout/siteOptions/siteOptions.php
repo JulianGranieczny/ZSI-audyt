@@ -19,6 +19,94 @@ $staticTexts = [
         'pl' => 'zaloguj się',
         'en' => 'login',
     ],
+    'footer_brand_desc' => [
+        'pl' => 'Twój sklep premium z wyselekcjonowaną modą, elektroniką, wystrojem wnętrz i sprzętem sportowym — wszystko w bezkonkurencyjnych cenach.',
+        'en' => 'Your premium destination for curated fashion, electronics, home decor, and sports gear — all at unbeatable prices.',
+    ],
+    'footer_shop' => [
+        'pl' => 'SKLEP',
+        'en' => 'SHOP',
+    ],
+    'shop_fashion' => [
+        'pl' => 'Moda',
+        'en' => 'Fashion',
+    ],
+    'shop_electronics' => [
+        'pl' => 'Elektronika',
+        'en' => 'Electronics',
+    ],
+    'shop_home' => [
+        'pl' => 'Dom i styl życia',
+        'en' => 'Home & Living',
+    ],
+    'shop_sports' => [
+        'pl' => 'Sport i fitness',
+        'en' => 'Sports & Fitness',
+    ],
+    'shop_new' => [
+        'pl' => 'Nowości',
+        'en' => 'New Arrivals',
+    ],
+    'shop_sale' => [
+        'pl' => 'Wyprzedaż',
+        'en' => 'Sale',
+    ],
+    'footer_support' => [
+        'pl' => 'WSPARCIE',
+        'en' => 'SUPPORT',
+    ],
+    'support_help' => [
+        'pl' => 'Centrum pomocy',
+        'en' => 'Help Center',
+    ],
+    'support_track' => [
+        'pl' => 'Śledź zamówienie',
+        'en' => 'Track My Order',
+    ],
+    'support_returns' => [
+        'pl' => 'Zwroty i reklamacje',
+        'en' => 'Returns & Refunds',
+    ],
+    'support_shipping' => [
+        'pl' => 'Polityka wysyłek',
+        'en' => 'Shipping Policy',
+    ],
+    'support_size' => [
+        'pl' => 'Tabela rozmiarów',
+        'en' => 'Size Guide',
+    ],
+    'support_contact' => [
+        'pl' => 'Kontakt',
+        'en' => 'Contact Us',
+    ],
+    'footer_contact_title' => [
+        'pl' => 'KONTAKT',
+        'en' => 'CONTACT',
+    ],
+    'newsletter' => [
+        'pl' => 'Newsletter',
+        'en' => 'Newsletter',
+    ],
+    'email_placeholder' => [
+        'pl' => 'Twój email',
+        'en' => 'Your email',
+    ],
+    'all_rights_reserved' => [
+        'pl' => 'Wszelkie prawa zastrzeżone.',
+        'en' => 'All rights reserved.',
+    ],
+    'privacy_policy' => [
+        'pl' => 'Polityka prywatności',
+        'en' => 'Privacy Policy',
+    ],
+    'terms_of_service' => [
+        'pl' => 'Regulamin',
+        'en' => 'Terms of Service',
+    ],
+    'cookie_policy' => [
+        'pl' => 'Polityka Cookies',
+        'en' => 'Cookie Policy',
+    ],
 ];
 
 function translatedText($text, $array = null)
